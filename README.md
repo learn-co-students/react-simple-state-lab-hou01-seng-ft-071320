@@ -54,11 +54,12 @@ array (essentially making 10 rows, with 10 values in each row). Because we are
 responsible React developers, we want to make sure we have a default grid in
 case no `values` prop is passed.
 
-1. Make a default `values` prop for `Matrix`, which is a 10x10 array filled with
+<!-- 1. Make a default `values` prop for `Matrix`, which is a 10x10 array filled with
    the values '#F00' (red). For inspiration, take a look at `src/data.js`.
-2. Once you have made your `Cell` component, replace the return value in
+    -->
+<!-- 2. Once you have made your `Cell` component, replace the return value in
    `genRow`'s map to: `<Cell value={val} />`. Here we are specifying our `Cell`
-   component should have a `value` prop. 
+   component should have a `value` prop.  -->
 
 ### `Cell`
 
@@ -66,7 +67,7 @@ Create a new component in `src/` called `Cell`. The `Cell` component will give
 us our first chance to use `state`. We want each `Cell` to keep track of a
 single `state` value: `color`, (which will be a 3 digit hex value i.e. '#FFF').
 
-1. Define a `constructor` method in `Cell`, which sets an initial state key of
+<!-- 1. Define a `constructor` method in `Cell`, which sets an initial state key of
    `color` to the `value` prop which is passed from its parent component.
    Remember to call `super()` on the first line of the constructor (this is
    required in React components if we are to use `this.state` in the constructor).
@@ -77,13 +78,15 @@ single `state` value: `color`, (which will be a 3 digit hex value i.e. '#FFF').
       super()
       this.state = {} // ...define initial state with a key of 'color' set to the 'value' prop
     }
-    ```
+    ``` -->
 
-2. `Cell` should render a single `<div>` with a className of `cell`
+<!-- 2. `Cell` should render a single `<div>` with a className of `cell` -->
+
 3. In render, the cell should set the background color in-line for the `<div>`
    by adding the following attribute: `style={{backgroundColor: '#FFF'}}`
    ('#FFF' is just used as an example value here - the value should be the state's
    color)
+   
 4. Create a click listener which, when activated, updates the state to the
    following hex value: '#333'
 
